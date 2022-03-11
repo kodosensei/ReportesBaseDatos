@@ -191,6 +191,9 @@ $pdf->SetFont('Arial', '', 12);
 //El ancho de las celdas
 $pdf->SetWidths(array(10, 60, 80, 35)); //???
 
+// esto no lo mencione en el video pero también pueden poner la alineación de cada COLUMNA!!!
+$pdf->SetAligns(array('C','C','C','L'));
+
 for ($i = 0; $i < count($data); $i++) {
 
 	$pdf->Row(array($i + 1, $data[$i]['codigo'], ucwords(strtolower(utf8_decode($data[$i]['nombre']))), '$' . $data[$i]['precio']), 15);
